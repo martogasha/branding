@@ -1056,7 +1056,32 @@ h1, h2, h3, h4, h5, h6 {
 /*----------------------------------------*/
 /*  5.2 Slider BG
 /*----------------------------------------*/
-
+.slider-single.bg-1 {
+	background-image:url(assets/images/sliders/slider.JPG);
+}
+.slider-single.bg-2 {
+	background-image:url(assets/images/sliders/slider.JPG);
+}
+.slider-single.bg-3 {
+	background-image:url(assets/images/sliders/slider.JPG);
+	height:515px;
+}
+.slider-single.bg-4 {
+	background-image:url(assets/images/sliders/slider.JPG);
+	height:515px;
+}
+.slider-single.bg-5 {
+	background-image:url(assets/images/sliders/slider.JPG);
+	height:630px;
+}
+.slider-single.bg-6 {
+	background-image:url(assets/images/sliders/slider.JPG);
+	height:700px;
+}
+.slider-single.bg-7 {
+	background-image:url(assets/images/sliders/slider.JPG);
+	height:630px;
+}
 /*----------------------------------------*/
 /*  5.2 Banner
 /*----------------------------------------*/
