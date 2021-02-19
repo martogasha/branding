@@ -437,37 +437,29 @@
                 <div class="row mt-30">
                     <div class="col-lg-6 col-sm-6 pl-05">
                         <div class="banner-sm hover-effect">
-                            <img src="assets/images/banners/small/1.jpg" alt="" />
+                            <img src="assets/images/banners/small/add.jpg" alt="" />
                             <div class="banner-info">
-                                <h4>Clothing</h4>
-                                <p>Extra <strong>30%</strong> <br/>  <strong>Off</strong> All <br/> Sale Styles</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 pl-05">
                         <div class="banner-sm hover-effect mt-sm-20">
-                            <img src="assets/images/banners/small/2.jpg" alt="" />
+                            <img src="assets/images/banners/small/add1.jpg" alt="" />
                             <div class="banner-info">
-                                <h4>Tech</h4>
-                                <p>Riley <strong>Smart</strong> <br/>  <strong>Home</strong> Patrol <br/> Robot</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 pl-05">
                         <div class="banner-sm hover-effect mt-20">
-                            <img src="assets/images/banners/small/3.jpg" alt="" />
+                            <img src="assets/images/banners/small/add3.jpg" alt="" />
                             <div class="banner-info">
-                                <h4>Beauty</h4>
-                                <p>20% Off or <br/> more <strong>Beauty <br/> Product</strong></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 pl-05">
                         <div class="banner-sm hover-effect mt-20">
-                            <img src="assets/images/banners/small/4.jpg" alt="" />
+                            <img src="assets/images/banners/small/add2.jpg" alt="" />
                             <div class="banner-info">
-                                <h4>Electronics</h4>
-                                <p>Globe Electric <br/> <strong>House & <br/> Appliances</strong></p>
                             </div>
                         </div>
                     </div>
