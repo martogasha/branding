@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 Route::get('/','ClientController@index');
 Route::get('shop','ClientController@shop');
+Route::get('about','ClientController@about');
 Route::get('productDetail/{id}','ClientController@productDetail');
 Route::resource('cart','CartController');
 Route::post('cartOne','CartController@cartOne');

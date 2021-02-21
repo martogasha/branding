@@ -19,6 +19,14 @@ class ClientController extends Controller
             'totalPrice'=>$cart->totalPrice
         ]);
     }
+    public function about(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.about',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
     public function getProductDetail(Request $request){
         if ($request->ajax()){
             $output = "";

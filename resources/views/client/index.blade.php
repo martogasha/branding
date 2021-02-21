@@ -100,7 +100,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{url('about')}}">
                                             About
                                         </a>
                                     </li>

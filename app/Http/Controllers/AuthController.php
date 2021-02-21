@@ -50,7 +50,7 @@ class AuthController extends Controller
             'last_name'=>$request->input('last_name'),
             'user_email'=>$request->input('email'),
             'user_phone'=>$request->input('phone'),
-            'password'=>Hash::make($request->input('password')),
+            '   password'=>Hash::make($request->input('password')),
             'user_role'=>1
         ]);
         return redirect(url('Login'))->with('success','Register Success Login');
