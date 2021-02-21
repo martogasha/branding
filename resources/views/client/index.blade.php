@@ -127,9 +127,9 @@
                     @else
                         <div class="col-lg-2">
                             <div class="register-login pull-right">
-                                <a href="#" data-toggle="modal" data-target="#auth">Register</a>
+                                <a href="{{url('Register')}}" data-toggle="modal" data-target="#auth">Register</a>
                                 <span>/</span>
-                                <a href="#">Sign in</a>
+                                <a href="{{url('Login')}}">Sign in</a>
                             </div>
                         </div>
                     @endif
