@@ -537,33 +537,54 @@
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Product Category:</label>
                             <select class="form-control" name="product_category" id="exampleFormControlSelect1">
-                                <option value="large">Large Format Printing</option>
-                                <option value="digital">Digital & Offset Printing</option>
-                                <option value="book">Book Printing</option>
-                                <option value="branding">Branding</option>
-
+                                <option value="promotion">PROMOTIONAL ITEMS</option>
+                                <option value="large">LARGE FORMAT PRINTING</option>
+                                <option value="digital">DIGITAL & OFFSET PRINTING</option>
+                                <option value="book">CASH/RECEIPT BOOKS</option>
+                                <option value="corporate">CORPRATE BRANDING</option>
+                                <option value="screen">SCREEN PRINTING</option>
+                                <option value="uv">UV PRINTING</option>
+                                <option value="embroidery">EMBROIDERY SERVICES</option>
+                                <option value="interior">INTERIOR DECOR</option>
                             </select>
                         </div>
-
+                        <div class="form-group" id="promotional">
+                            <label for="inputName">PROMOTIONAL ITEMS</label>
+                            <input type="hidden" name="category" value="promotional">
+                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
+                                <option value="caap">Caps</option>
+                                <option value="carrierbags">Carrier Bags</option>
+                                <option value="flashdisk">Flash Disk</option>
+                                <option value="mugs">Mugs</option>
+                                <option value="umbrellas">Umbrellas</option>
+                                <option value="wristbands">Wrist Bands</option>
+                                <option value="hoddies">Hoddies</option>
+                                <option value="tsho">Tshirts</option>
+                                <option value="magicmugs">Magic Mug</option>
+                                <option value="nonwovenbags">Non woven Bags</option>
+                                <option value="pens">Pens</option>
+                                <option value="waterb">Water Bottles</option>
+                            </select>
+                        </div>
                         <div class="form-group" id="digitalPrinting">
                             <label for="inputName">Digital Printing</label>
                             <input type="hidden" name="category" value="dPrinting">
                             <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="bCards">Business Cards</option>
-                                <option value="pFlyers">Poster/Flyers</option>
-                                <option value="pMugs">Pens/Mugs</option>
+                                <option value="bcard">Business Cards</option>
+                                <option value="flyer">Flyers</option>
+                                <option value="poster">Poster</option>
+                                <option value="magazine">Magazine</option>
                                 <option value="bronchures">Bronchures</option>
                                 <option value="calenders">Calenders</option>
-                                <option value="labels">Labels</option>
                             </select>
                         </div>
                         <div class="form-group" id="bookPrinting">
-                            <label for="inputName">Book Printing</label>
+                            <label for="inputName">Cash/Receipt Books</label>
                             <input type="hidden" name="category" value="bPrinting">
                             <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="iBooks">Invoice Books</option>
-                                <option value="dBooks">Delivery Books</option>
-                                <option value="rBooks">Receipt Books</option>
+                                <option value="invoice">Invoice</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="receipt">Receipt</option>
                                 <option value="lHeads">Letter Heads</option>
                             </select>
                         </div>
@@ -571,23 +592,68 @@
                             <label for="inputName">Large Format Printing</label>
                             <input type="hidden" name="category" value="lfPrinting">
                             <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="banner">Banner</option>
-                                <option value="stickers">Stikers</option>
+                                <option value="backbanner">Back Drop Banner</option>
+                                <option value="banners">Banners</option>
                                 <option value="rBanners">Roll-up Banners</option>
-                                <option value="lebels">Lebels</option>
+                                <option value="labels">Labels</option>
+                                <option value="sticker">Sticker</option>
+                                <option value="canvas">Canvas</option>
+                                <option value="teardrop">Tear Drop Banners</option>
                             </select>
                         </div>
-                        <div class="form-group" id="branding">
-                            <label for="inputName">Branding</label>
-                            <input type="hidden" name="category" value="branding">
+                        <div class="form-group" id="corporate">
+                            <label for="inputName">Corporate Branding</label>
+                            <input type="hidden" name="category" value="cbranding">
                             <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="cBranding">Car Branding</option>
-                                <option value="oBranding">Office Branding</option>
-                                <option value="ioBranding">Indoor/Outdoor Branding</option>
-                                <option value="uLabelling">Uniform Labelling</option>
-                                <option value="signane">3D & 2D signage</option>
-                                <option value="lBoxes">Light Boxes</option>
-                                <option value="tshirtMugs">T-shirts/Mug Branding</option>
+                                <option value="bcards">Business Cards</option>
+                                <option value="caps">Caps</option>
+                                <option value="diaries">Diaries</option>
+                                <option value="envelops">Envelops</option>
+                                <option value="letterhead">Letter Head</option>
+                                <option value="logo">Logo</option>
+                                <option value="notebook">Notebooks</option>
+                                <option value="polotshirt">Polo t-shirt</option>
+                                <option value="vehiclebranding">Vehicle Branding</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="screen">
+                            <label for="inputName">Screen Printing</label>
+                            <input type="hidden" name="category" value="screen">
+                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
+                                <option value="gift">Gift Bags</option>
+                                <option value="hoodie">Hoodies</option>
+                                <option value="tshirt">Tshirts</option>
+                                <option value="umbrellas">Umbrellas</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="uvPrinting">
+                            <label for="inputName">UV Printing</label>
+                            <input type="hidden" name="category" value="uvprint">
+                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
+                                <option value="flashdisks">Flash Disks</option>
+                                <option value="phonecovers">Phone Covers</option>
+                                <option value="thermos">Thermos Mugs</option>
+                                <option value="waterbottle">Water Bottles</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="embroidery">
+                            <label for="inputName">EMBROIDERY SERVICES</label>
+                            <input type="hidden" name="category" value="embroidery">
+                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
+                                <option value="caps">Caps</option>
+                                <option value="hoddies">Hoddies</option>
+                                <option value="tshirts">Tshirts</option>
+                                <option value="letterhead">Letter Head</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="interior">
+                            <label for="inputName">INTERIOR DECOR</label>
+                            <input type="hidden" name="category" value="interior">
+                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
+                                <option value="wallpaper">Wallpaper</option>
+                                <option value="photomounting">Photo Mounting</option>
+                                <option value="wallmart">Wall mart</option>
+                                <option value="canvas">Canvas</option>
                             </select>
                         </div>
                     </div>
@@ -645,37 +711,117 @@
 <script src="js/main.js"></script>
 <script>
     $(document).ready(function () {
+        $('#promotional').show();
         $('#digitalPrinting').hide();
         $('#bookPrinting').hide();
-        $('#largeFormatPrinting').show();
-        $('#branding').hide();
+        $('#largeFormatPrinting').hide();
+        $('#corporate').hide();
+        $('#screen').hide();
+        $('#uvPrinting').hide();
+        $('#embroidery').hide();
+        $('#interior').hide();
     });
     $('#exampleFormControlSelect1').on('change',function () {
        $category = $(this).val();
        switch ($category){
-           case 'digital':
-           $('#digitalPrinting').show();
-           $('#bookPrinting').hide();
-           $('#largeFormatPrinting').hide();
-           $('#branding').hide();
+           case 'promotion':
+               $('#promotional').show();
+               $('#digitalPrinting').hide();
+               $('#bookPrinting').hide();
+               $('#largeFormatPrinting').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').hide();
            break;
            case 'large':
+               $('#promotional').hide();
                $('#digitalPrinting').hide();
                $('#bookPrinting').hide();
                $('#largeFormatPrinting').show();
-               $('#branding').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').hide();
                break;
            case 'book':
+               $('#promotional').hide();
                $('#digitalPrinting').hide();
                $('#bookPrinting').show();
                $('#largeFormatPrinting').hide();
-               $('#branding').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').hide();
                break;
-           case 'branding':
+           case 'digital':
+               $('#promotional').hide();
+               $('#digitalPrinting').show();
+               $('#bookPrinting').hide();
+               $('#largeFormatPrinting').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').hide();
+               break;
+           case 'corporate':
+               $('#promotional').hide();
                $('#digitalPrinting').hide();
                $('#bookPrinting').hide();
                $('#largeFormatPrinting').hide();
-               $('#branding').show();
+               $('#corporate').show();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').hide();
+               break;
+           case 'screen':
+               $('#promotional').hide();
+               $('#digitalPrinting').hide();
+               $('#bookPrinting').hide();
+               $('#largeFormatPrinting').hide();
+               $('#corporate').hide();
+               $('#screen').show();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').hide();
+               break;
+           case 'uv':
+               $('#promotional').hide();
+               $('#digitalPrinting').hide();
+               $('#bookPrinting').hide();
+               $('#largeFormatPrinting').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').show();
+               $('#embroidery').hide();
+               $('#interior').hide();
+               break;
+           case 'embroidery':
+               $('#promotional').hide();
+               $('#digitalPrinting').hide();
+               $('#bookPrinting').hide();
+               $('#largeFormatPrinting').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').show();
+               $('#interior').hide();
+               break;
+           case 'interior':
+               $('#promotional').hide();
+               $('#digitalPrinting').hide();
+               $('#bookPrinting').hide();
+               $('#largeFormatPrinting').hide();
+               $('#corporate').hide();
+               $('#screen').hide();
+               $('#uvPrinting').hide();
+               $('#embroidery').hide();
+               $('#interior').show();
                break;
        }
     });

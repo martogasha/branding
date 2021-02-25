@@ -1,11 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from lionsbite.co.uk/html/hakduck-preview/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2020 05:23:42 GMT -->
+<!-- Mirrored from lionsbite.co.uk/html/hakduck-preview/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2020 05:24:29 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Davix - About</title>
+    <title>Davix - About Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,10 +51,10 @@
 <!--header-area start-->
 <header class="header-area pb-22">
     <div class="desktop-header">
-      @include('clientPartial.nav')
-    <!--breadcrumb-area start-->
-    <div class="breadcrumb-area mt-25">
-        <div class="container-fluid">
+        @include('clientPartial.nav')
+
+        <div class="breadcrumb-area mt-25">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
@@ -71,24 +71,57 @@
 </header>
 <!--header-area end-->
 
-<!--products-area start-->
-<!--products-area end-->
-
 <!--page-banner-area start-->
-<div class="page-banner-area bg-1">
+<!--banner-area end-->
+
+<!--about-area start-->
+<div class="about-area mt-50">
     <div class="container">
-        <div class="row align-items-center height-400">
-            <div class="col-lg-8 offset-lg-4">
-                <div class="page-banner-text">
-                    <h2>Welcome To Davix Design</h2>
-                    <p>Davix Designs is a creative design and branding company aimed at providing the best solutions to corporates, small businesses and other institutions to help them in advertising and marketing. We make sure that your brand always stands out in the highly competitive market. , we offer tailored solutions for our clients, from small start-ups through to established enterprises.</p>
-                </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="img-100p" src="assets/images/sliders/slider1.JPG" alt="" STYLE="height: 300px;width: 600px" />
             </div>
+            <div class="col-lg-6 mt-sm-30">
+                <div id="accordion">
+                    <div class="card single-faq">
+                        <div class="card-header faq-heading" id="headingOne">
+                            <h5 class="mb-0">
+                                <a href="#collapseOne" class="btn btn-link" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                                    GRAPHIC DESIGN
+
+
+                                    <i class="fa fa-plus-circle pull-right"></i>
+                                    <i class="fa fa-minus-circle pull-right"></i>
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Davix is a creative design and branding company aimed at providing the best solutions to corporates, small businesses and other institutions to help them in advertising and marketing. We make sure that your brand always stands out in the highly competitive market. Grid Branding Solutions has a team of creative, motivated and passionate designers who work together to give you the solutions you need.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
+    </div>
+    <br>
+</div>
+<div class="container">
+    <div class="col-lg-6">
+        <h3>Directions</h3>
+        <hr>
+    <div class="row">
+    <div id="map" style="width:100%;height: 400px"></div>
+</div>
     </div>
 </div>
-
-<!--footer-area start-->
+<!--about-area end-->
 @include('clientPartial.footer')
 <!--footer-area end-->
 
@@ -117,121 +150,29 @@
 <!-- main js -->
 <script src="assets/js/main.js"></script>
 
-<!-- Modal -->
-<div class="modal fade" id="quick-view" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="tab-content">
-                            <div id="product-1" class="tab-pane fade in show active">
-                                <div class="product-details-thumb">
-                                    <img src="assets/images/products/product-details/1.jpg" alt="" />
-                                </div>
-                            </div>
-                            <div id="product-2" class="tab-pane fade">
-                                <div class="product-details-thumb">
-                                    <img src="assets/images/products/product-details/2.jpg" alt="" />
-                                </div>
-                            </div>
-                            <div id="product-3" class="tab-pane fade">
-                                <div class="product-details-thumb">
-                                    <img src="assets/images/products/product-details/3.jpg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="nav nav-tabs products-nav-tabs horizontal quick-view mt-10">
-                            <li><a class="active" data-toggle="tab" href="#product-1"><img src="assets/images/products/product-details/thumb-1.jpg" alt="" /></a></li>
-                            <li><a data-toggle="tab" href="#product-2"><img src="assets/images/products/product-details/thumb-2.jpg" alt="" /></a></li>
-                            <li><a data-toggle="tab" href="#product-3"><img src="assets/images/products/product-details/thumb-3.jpg" alt="" /></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="product-details-desc">
-                                    <h2>Apple The New MacBook Retina 2016 MLHA2 12 inches</h2>
-                                    <ul>
-                                        <li>1.6 GHz dual-core Intel Core i5 (Turbo Boost up to 2.7 GHz) with 3 MB shared L3 cache 8 GB of 1600 MHz LPDDR3 RAM; 128 GB PCIe-based flash storage</li>
-                                        <li>13.3-Inch (diagonal) LED-backlit Glossy Widescreen Display, 1440 x 900 resolution Intel HD Graphics 6000</li>
-                                        <li>OS X El Capitan, Up to 12 Hours of Battery Life Macbook Air does not have a Retina display on any model.</li>
-                                    </ul>
-                                    <div class="product-meta">
-                                        <ul class="list-none">
-                                            <li>SKU: 00012 <span>|</span></li>
-                                            <li>Categories:
-                                                <a href="#">Tech</a>
-                                                <a href="#">Macbook</a>
-                                                <a href="#">Laptop</a>
-                                                <span>|</span>
-                                            </li>
-                                            <li>Tags:
-                                                <a href="#">Tech,</a>
-                                                <a href="#">Apple</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="social-icons style-5">
-                                        <span>Share Link:</span>
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        <a href="#"><i class="fa fa-rss"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="product-action stuck text-left">
-                                    <div class="free-delivery">
-                                        <a href="#"><i class="ti-truck"></i> Free Delivery</a>
-                                    </div>
-                                    <div class="product-price-rating">
-                                        <div>
-                                            <del>629.99</del>
-                                        </div>
-                                        <span>$495.00</span>
-                                        <div class="pull-right">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="product-colors mt-20">
-                                        <label>Select Color:</label>
-                                        <ul class="list-none">
-                                            <li>Red</li>
-                                            <li>Black</li>
-                                            <li>Blue</li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-quantity mt-15">
-                                        <label>Quatity:</label>
-                                        <input type="number" value="1" />
-                                    </div>
-                                    <div class="add-to-get mt-50">
-                                        <a href="#" class="add-to-cart">Add to Cart</a>
-                                        <a href="#" class="add-to-cart compare">+ ADD to Compare</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--google-map-->
+<script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyCm2jbUoX9T_MylOzVAaRiXKauyh2DXn_E"></script>
 
 </body>
+<script>
+    x = navigator.geolocation;
+    x.getCurrentPosition(success, failure);
+    function success(position){
+        var myLat = -1.244494;
+        var myLong = 36.664079;
+        var coords = new google.maps.LatLng(myLat,myLong);
+        var mapOptions = {
+            zoom:9,
+            center: coords,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var marker = new google.maps.Marker({map:map, position:coords});
+    }
+    function failure(){
+    }
 
-<!-- Mirrored from lionsbite.co.uk/html/hakduck-preview/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2020 05:24:06 GMT -->
+</script>
+
+<!-- Mirrored from lionsbite.co.uk/html/hakduck-preview/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2020 05:24:30 GMT -->
 </html>
