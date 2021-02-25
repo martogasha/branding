@@ -2981,7 +2981,6 @@ a.value-decrease::before {
 /*  22. About
 /*----------------------------------------*/
 .page-banner-area {
-	background-image:url("assets/images/banners/small/add.jpg");
 	background-size:contain;
 	background-repeat:no-repeat;
 	background-color:#f8fafb;
