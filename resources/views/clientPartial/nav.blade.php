@@ -5,8 +5,8 @@
             <div class="col-lg-6">
                 <div class="topbar-left">
                     <ul class="list-none">
-                        <li>SHOP EVENTS & SAVE UP TO <span>65% OFF!</span></li>
-                        <li>Call Us: <span>001-1234-88888</span></li>
+                        <li>SHOP EVENTS & SAVE UP TO <span>15% OFF!</span></li>
+                        <li>Call Us: <span>+254 727 995 279</span></li>
                     </ul>
                 </div>
             </div>
@@ -51,10 +51,15 @@
                             </li>
                             <li><a href="#">Services</a>
                                 <ul class="submenu">
-                                    <li><a href="blog.html">Printing</a></li>
-                                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                                    <li><a href="blog-fullwidth.html">Blog Full Width</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="blog.html">WEB DESIGN</a></li>
+                                    <li><a href="blog-grid.html">DIGITAL MARKETING</a></li>
+                                    <li><a href="blog-fullwidth.html">CORPORATE IDENTITY</a></li>
+                                    <li><a href="blog-details.html">GRAPHIC DESIGN</a></li>
+                                    <li><a href="blog-details.html">LARGE FORMAT PRINTING</a></li>
+                                    <li><a href="blog-details.html">PROMOTIONAL ITEMS</a></li>
+                                    <li><a href="blog-details.html">SIGNAGE SERVICE</a></li>
+                                    <li><a href="blog-details.html">DIGITAL PRINTING</a></li>
+                                    <li><a href="blog-details.html">OFFSET PRINTING</a></li>
                                 </ul>
                             </li>
                             <li><a href="contact.html">Contact</a></li>

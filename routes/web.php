@@ -41,6 +41,10 @@ Route::get('admin','AdminController@admin');
 Route::get('products','AdminController@products');
 Route::get('orders','AdminController@orders');
 Route::get('reviews','AdminController@reviews');
+Route::get('editProduct/{id}','AdminController@edit');
+Route::post('editProd','AdminController@editProd');
+Route::post('deleteProduct','AdminController@delete');
+Route::post('storeCategory','AdminController@storeCategory')->name('storeCategory');
 Route::post('storeProducts','AdminController@storeProduct')->name('storeProduct');
 
 

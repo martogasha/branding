@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\category;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,35 @@ class AdminController extends Controller
         else{
             return redirect(url('Login'))->with('error','Credentials doesnt match');
         }
+    }
+    public function edit($id){
+        $product = Product::find($id);
+        return view('admin.edit',[
+            'product'=>$product
+        ]);
+    }
+    public function editProd(Request $request){
+        $edit = Product::find($request->product_id);
+        $edit->product_name = $request->input('product_name');
+        $edit->product_desc = $request->input('product_desc');
+        $edit->product_price = $request->input('product_price');
+        $edit->product_cancel_price = $request->input('product_cancel_price');
+        $edit->product_category = $request->input('category');
+        $edit->product_brand = $request->input('brand');
+        $edit->save();
+        return redirect(url('products'))->with('success','Product Edited Success');
+    }
+    public function delete(Request $request){
+        $delete = Product::find($request->product_id);
+        $delete->delete();
+        return back()->with('success','Product deleted success');
+    }
+    public function storeCategory(Request $request){
+        $category = category::create([
+            'category'=>$request->input('category'),
+            'brand'=>$request->input('brand'),
+        ]);
+        return back()->with('success','Category saved');
     }
     public function products(){
         $products = Product::all();
@@ -36,8 +66,8 @@ class AdminController extends Controller
         $products->product_desc = $request->input('product_desc');
         $products->product_price = $request->input('product_price');
         $products->product_cancel_price = $request->input('product_cancel_price');
-        $products->product_category = $request->input('product_category');
-        $products->product_brand = $request->input('product_brand');
+        $products->product_category = $request->input('category');
+        $products->product_brand = $request->input('brand');
         $products->save();
 
         return back()->with('success','Product Stored Success');

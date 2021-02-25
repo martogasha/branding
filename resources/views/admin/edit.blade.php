@@ -13,30 +13,30 @@
     <link rel="shortcut icon" href="img/fav.png" />
 
     <!-- Title -->
-    <title>Davix - Products</title>
+    <title>Davix - category</title>
 
 
     <!-- *************
         ************ Common Css Files *************
     ************ -->
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 
     <!-- Icomoon Font Icons css -->
-    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="stylesheet" href="{{asset('fonts/style.css')}}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
 
     <!-- *************
         ************ Vendor Css Files *************
     ************ -->
     <!-- DateRange css -->
-    <link rel="stylesheet" href="vendor/daterange/daterange.css" />
+    <link rel="stylesheet" href="{{asset('vendor/daterange/daterange.css')}}" />
 
     <!-- Gallery css -->
-    <link rel="stylesheet" href="vendor/gallery/gallery.css">
+    <link rel="stylesheet" href="{{asset('vendor/gallery/gallery.css')}}">
 
 </head>
 <body>
@@ -401,9 +401,15 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link active-page" href="{{url('products')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="{{url('products')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-devices_other nav-icon"></i>
                         Products
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active-page" href="#" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-devices_other nav-icon"></i>
+                        Edit {{$product->product_name}}
                     </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -424,7 +430,7 @@
     </nav>
     <!-- Navigation end -->
 
-@include('flash-message')
+
     <!-- *************
         ************ Main container start *************
     ************* -->
@@ -435,10 +441,7 @@
         <div class="page-header">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item active">Products</li>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#product">
-                    Add Product
-                </button>
+                <li class="breadcrumb-item active">{{$product->product_name}}</li>
             </ol>
 
             <ul class="app-actions">
@@ -460,156 +463,50 @@
                 </li>
             </ul>
         </div>
-        <!-- Page header end -->
-
-
         <!-- Content wrapper start -->
         <div class="content-wrapper">
 
+            <!-- Row start -->
+            <div class="row gutters">
 
-            <!-- Gallery start -->
-            <div class="baguetteBoxThree gallery">
-                <!-- Row start -->
-                <div class="row gutters">
-                    @foreach($products as $product)
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form action="{{url('editProd')}}" method="post">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{$product->id}}">
+                    <div class="row gutters">
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
                         <a href="{{asset('uploads/product/'.$product->product_image)}}" class="effects">
                             <img src="{{asset('uploads/product/'.$product->product_image)}}" class="img-fluid" alt="Wafi Admin">
-                            <div class="overlay">
-                                <span class="expand">+</span>
-                            </div>
                         </a>
-                        <h5>{{$product->product_name}}</h5>
-                        <h4>Ksh: {{$product->product_price}}</h4>
-                        <h4><s>Ksh: {{$product->product_cancel_price}}</s></h4>
-                            <a href="{{url('editProduct',$product->id)}}"><button class="btn btn-info">Edit</button></a>
-                        <form action="{{url('deleteProduct')}}" method="post">
-                            @csrf
-                            <input type="hidden" name="product_id" value="{{$product->id}}">
-                        <a href="{{url('deleteProduct')}}"><button type="submit" class="btn btn-danger">Delete</button></a>
-                        </form>
-
-                    </div>
-                    @endforeach
-                </div>
-                <!-- Row end -->
-            </div>
-            <!-- Gallery end -->
-
-
-        </div>
-        <!-- Content wrapper end -->
-
-
-    </div>
-    <!-- Add Product Modal -->
-    <div class="modal fade" id="product" tabindex="-1" role="dialog" aria-labelledby="customModalTwoLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="{{route('storeProduct')}}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="customModalTwoLabel">Add Product</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input type="file" name="product_image">
-                        </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Product Name:</label>
-                            <input type="text" class="form-control" name="product_name" id="recipient-name">
+                            <input type="text" class="form-control" name="product_name" value="{{$product->product_name}}" id="recipient-name">
                         </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Product Description:</label>
-                            <textarea class="form-control" name="product_desc" id="message-text"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Product Price:</label>
-                            <input type="text" class="form-control" name="product_price" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Product Price Cancel:</label>
-                            <input type="text" class="form-control" name="product_cancel_price" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Product Category:</label>
-                            <select class="form-control" name="product_category" id="exampleFormControlSelect1">
-                                <option value="large">Large Format Printing</option>
-                                <option value="digital">Digital & Offset Printing</option>
-                                <option value="book">Book Printing</option>
-                                <option value="branding">Branding</option>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Product Description:</label>
+                                <input type="text" class="form-control" name="product_desc" value="{{$product->product_desc}}" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Product price:</label>
+                                <input type="text" class="form-control" name="product_price" value="{{$product->product_price}}" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Product Price Cancel:</label>
+                                <input type="text" class="form-control" name="product_cancel_price" value="{{$product->product_cancel_price}}" id="recipient-name">
+                            </div>
 
-                            </select>
-                        </div>
-
-                        <div class="form-group" id="digitalPrinting">
-                            <label for="inputName">Digital Printing</label>
-                            <input type="hidden" name="category" value="dPrinting">
-                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="bCards">Business Cards</option>
-                                <option value="pFlyers">Poster/Flyers</option>
-                                <option value="pMugs">Pens/Mugs</option>
-                                <option value="bronchures">Bronchures</option>
-                                <option value="calenders">Calenders</option>
-                                <option value="labels">Labels</option>
-                            </select>
-                        </div>
-                        <div class="form-group" id="bookPrinting">
-                            <label for="inputName">Book Printing</label>
-                            <input type="hidden" name="category" value="bPrinting">
-                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="iBooks">Invoice Books</option>
-                                <option value="dBooks">Delivery Books</option>
-                                <option value="rBooks">Receipt Books</option>
-                                <option value="lHeads">Letter Heads</option>
-                            </select>
-                        </div>
-                        <div class="form-group" id="largeFormatPrinting">
-                            <label for="inputName">Large Format Printing</label>
-                            <input type="hidden" name="category" value="lfPrinting">
-                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="banner">Banner</option>
-                                <option value="stickers">Stikers</option>
-                                <option value="rBanners">Roll-up Banners</option>
-                                <option value="lebels">Lebels</option>
-                            </select>
-                        </div>
-                        <div class="form-group" id="branding">
-                            <label for="inputName">Branding</label>
-                            <input type="hidden" name="category" value="branding">
-                            <select class="form-control" name="brand" aria-label=".form-select-sm example">
-                                <option value="cBranding">Car Branding</option>
-                                <option value="oBranding">Office Branding</option>
-                                <option value="ioBranding">Indoor/Outdoor Branding</option>
-                                <option value="uLabelling">Uniform Labelling</option>
-                                <option value="signane">3D & 2D signage</option>
-                                <option value="lBoxes">Light Boxes</option>
-                                <option value="tshirtMugs">T-shirts/Mug Branding</option>
-                            </select>
                         </div>
                     </div>
-                    <div class="modal-footer custom">
+                        <button type="submit" class="btn btn-info">Edit</button>
+                    </form>
 
-                        <div class="left-side">
-                            <button type="button" class="btn btn-link danger" data-dismiss="modal">Cancel</button>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-side">
-                            <button type="submit" class="btn btn-link success">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Add Product Modal -->
-    <!-- *************
-        ************ Main container end *************
-    ************* -->
-
+            </div>
+        </div>
     <!-- Footer start -->
     <footer class="main-footer">© Wafi 2020</footer>
     <!-- Footer end -->
@@ -620,66 +517,30 @@
     ************ Required JavaScript Files *************
 ************* -->
 <!-- Required jQuery first, then Bootstrap Bundle JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/moment.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('js/moment.js')}}"></script>
 
 
 <!-- *************
     ************ Vendor Js Files *************
 ************* -->
 <!-- Slimscroll JS -->
-<script src="vendor/slimscroll/slimscroll.min.js"></script>
-<script src="vendor/slimscroll/custom-scrollbar.js"></script>
+<script src="{{asset('vendor/slimscroll/slimscroll.min.js')}}"></script>
+<script src="{{asset('vendor/slimscroll/custom-scrollbar.js')}}"></script>
 
 <!-- Daterange -->
-<script src="vendor/daterange/daterange.js"></script>
-<script src="vendor/daterange/custom-daterange.js"></script>
+<script src="{{asset('vendor/daterange/daterange.js')}}"></script>
+<script src="{{asset('vendor/daterange/custom-daterange.js')}}"></script>
 
 <!-- Gallery JS -->
-<script src="vendor/gallery/baguetteBox.js" async></script>
-<script src="vendor/gallery/plugins.js" async></script>
-<script src="vendor/gallery/custom-gallery.js" async></script>
+<script src="{{asset('vendor/gallery/baguetteBox.js')}}" async></script>
+<script src="{{asset('vendor/gallery/plugins.js')}}" async></script>
+<script src="{{asset('vendor/gallery/custom-gallery.js')}}" async></script>
 
 <!-- Main Js Required -->
-<script src="js/main.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#digitalPrinting').hide();
-        $('#bookPrinting').hide();
-        $('#largeFormatPrinting').show();
-        $('#branding').hide();
-    });
-    $('#exampleFormControlSelect1').on('change',function () {
-       $category = $(this).val();
-       switch ($category){
-           case 'digital':
-           $('#digitalPrinting').show();
-           $('#bookPrinting').hide();
-           $('#largeFormatPrinting').hide();
-           $('#branding').hide();
-           break;
-           case 'large':
-               $('#digitalPrinting').hide();
-               $('#bookPrinting').hide();
-               $('#largeFormatPrinting').show();
-               $('#branding').hide();
-               break;
-           case 'book':
-               $('#digitalPrinting').hide();
-               $('#bookPrinting').show();
-               $('#largeFormatPrinting').hide();
-               $('#branding').hide();
-               break;
-           case 'branding':
-               $('#digitalPrinting').hide();
-               $('#bookPrinting').hide();
-               $('#largeFormatPrinting').hide();
-               $('#branding').show();
-               break;
-       }
-    });
-</script>
+<script src="{{asset('js/main.js')}}"></script>
+
 </body>
 
 <!-- Mirrored from bootstrap.gallery/wafi-admin/dashboard-v2/topbar/gallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Jul 2020 08:13:29 GMT -->
