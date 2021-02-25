@@ -92,7 +92,7 @@
                             <div class="product-details-desc">
                                 <h2>{{$detail->product_name}}</h2>
                                 <ul>
-                                    <li>1.6 GHz dual-core Intel Core i5 (Turbo Boost up to 2.7 GHz) with 3 MB shared L3 cache 8 GB of 1600 MHz LPDDR3 RAM; 128 GB PCIe-based flash storage</li>
+                                    <li>{{$detail->product_desc}}</li>
 
                                 </ul>
                             </div>
@@ -238,7 +238,7 @@
                         <h4><a href="#">iPATROL RILEY - WiFi Enabled Mobilized Home Monitoring Robot</a></h4>
                     </div>
                     <div class="product-thumb">
-                        <a href="#"><img src="assets/images/products/shop/1.jpg" alt="" /></a>
+                        <a href="#"><img src="{{asset('assets/images/products/shop/1.jpg')}}" alt="" /></a>
                         <div class="downsale"><span>-</span>$35</div>
                         <div class="product-quick-view">
                             <a href="#">quick view</a>

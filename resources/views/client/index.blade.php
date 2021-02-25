@@ -997,9 +997,6 @@
                                         <div class="product-thumb">
                                             <a href="{{url('productDetail',$large->id)}}"><img src="{{asset('uploads/product/'.$large->product_image)}}" alt="" /></a>
                                             <div class="downsale"><span>-</span>$25</div>
-                                            <div class="product-quick-view">
-                                                <a href="javascript:void(0);" class="view" id="{{$large->id}}" data-toggle="modal" data-target="#basic1">quick view</a>
-                                            </div>
                                         </div>
                                         <div class="product-price-rating">
                                             <span>Ksh: {{$large->product_price}}</span>
