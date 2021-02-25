@@ -1031,336 +1031,36 @@
                         </div>
                     </div>
                     <div class="row best-seller cv-visible">
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Camera</a></small>
-                                    <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/9.jpg" alt="" /></a>
-                                    <div class="downsale"><span>-</span>$25</div>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
+                        @foreach($digitals as $digital)
+                            <div class="col-lg-3">
+                                <!--single-product-->
+                                <div class="product-single">
+                                    <div class="product-title">
+                                        <h4><a href="#">{{$digital->product_name}}</a></h4>
                                     </div>
+                                    <div class="product-thumb">
+                                        <a href="{{url('productDetail',$digital->id)}}"><img src="{{asset('uploads/product/'.$digital->product_image)}}" alt="" /></a>
+                                        <div class="downsale"><span>-</span>$25</div>
+                                    </div>
+                                    <div class="product-price-rating">
+                                        <span>Ksh: {{$digital->product_price}}</span>
+                                        <del>Ksh: {{$digital->product_cancel_price}}</del>
+                                    </div>
+                                    <form id="productDetailForm">
+                                        <div class="product-action">
+                                            <input type="hidden" value="{{$digital->id}}" name="productId" id="productDetail">
+                                            <a href="javascript:void(0);" class="product-com
+
+
+                                            pare"><i class="ti-control-shuffle"></i></a>
+                                            <a href="javascript:document.getElementById('productDetailForm').submit()" class="add-to-cart">Add to Cart</a>
+                                            <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="product-price-rating">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
+                                <!--single-product-->
                             </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Iphone</a></small>
-                                    <h4><a href="#">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/10.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$395.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Electronics</a></small>
-                                    <h4><a href="#">iPATROL Riley V2 Bonus Bundle - WiFi</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/11.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$195.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Macbook</a></small>
-                                    <h4><a href="#">Swivl C Series RobotSW3322-C1 </a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/12.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$255.00</span>
-                                        <del>329.99</del>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Camera</a></small>
-                                    <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/13.jpg" alt="" /></a>
-                                    <div class="downsale"><span>-</span>$25</div>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Iphone</a></small>
-                                    <h4><a href="#">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/1.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$395.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Electronics</a></small>
-                                    <h4><a href="#">iPATROL Riley V2 Bonus Bundle - WiFi</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/2.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$195.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Macbook</a></small>
-                                    <h4><a href="#">Swivl C Series RobotSW3322-C1 </a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/3.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$255.00</span>
-                                        <del>329.99</del>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Camera</a></small>
-                                    <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/4.jpg" alt="" /></a>
-                                    <div class="downsale"><span>-</span>$25</div>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Iphone</a></small>
-                                    <h4><a href="#">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/5.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$395.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Electronics</a></small>
-                                    <h4><a href="#">iPATROL Riley V2 Bonus Bundle - WiFi</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/3.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$195.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Macbook</a></small>
-                                    <h4><a href="#">Swivl C Series RobotSW3322-C1 </a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/4.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-quick-view">
-                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="best-sellers mt-minus-40">
@@ -1372,336 +1072,36 @@
                         </div>
                     </div>
                     <div class="row best-seller cv-visible">
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Camera</a></small>
-                                    <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/9.jpg" alt="" /></a>
-                                    <div class="downsale"><span>-</span>$25</div>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
+                        @foreach($corporates as $corporate)
+                            <div class="col-lg-3">
+                                <!--single-product-->
+                                <div class="product-single">
+                                    <div class="product-title">
+                                        <h4><a href="#">{{$corporate->product_name}}</a></h4>
                                     </div>
+                                    <div class="product-thumb">
+                                        <a href="{{url('productDetail',$corporate->id)}}"><img src="{{asset('uploads/product/'.$corporate->product_image)}}" alt="" /></a>
+                                        <div class="downsale"><span>-</span>$25</div>
+                                    </div>
+                                    <div class="product-price-rating">
+                                        <span>Ksh: {{$corporate->product_price}}</span>
+                                        <del>Ksh: {{$corporate->product_cancel_price}}</del>
+                                    </div>
+                                    <form id="productDetailForm">
+                                        <div class="product-action">
+                                            <input type="hidden" value="{{$corporate->id}}" name="productId" id="productDetail">
+                                            <a href="javascript:void(0);" class="product-com
+
+
+                                            pare"><i class="ti-control-shuffle"></i></a>
+                                            <a href="javascript:document.getElementById('productDetailForm').submit()" class="add-to-cart">Add to Cart</a>
+                                            <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="product-price-rating">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
+                                <!--single-product-->
                             </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Iphone</a></small>
-                                    <h4><a href="#">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/10.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$395.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Electronics</a></small>
-                                    <h4><a href="#">iPATROL Riley V2 Bonus Bundle - WiFi</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/11.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$195.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Macbook</a></small>
-                                    <h4><a href="#">Swivl C Series RobotSW3322-C1 </a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/12.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$255.00</span>
-                                        <del>329.99</del>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Camera</a></small>
-                                    <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/13.jpg" alt="" /></a>
-                                    <div class="downsale"><span>-</span>$25</div>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Iphone</a></small>
-                                    <h4><a href="#">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/1.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$395.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Electronics</a></small>
-                                    <h4><a href="#">iPATROL Riley V2 Bonus Bundle - WiFi</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/2.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$195.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Macbook</a></small>
-                                    <h4><a href="#">Swivl C Series RobotSW3322-C1 </a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/3.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$255.00</span>
-                                        <del>329.99</del>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Camera</a></small>
-                                    <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/4.jpg" alt="" /></a>
-                                    <div class="downsale"><span>-</span>$25</div>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Iphone</a></small>
-                                    <h4><a href="#">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/shop/5.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$395.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Electronics</a></small>
-                                    <h4><a href="#">iPATROL Riley V2 Bonus Bundle - WiFi</a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/3.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-price-rating">
-                                    <div class="pull-left">
-                                        <span>$195.00</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product-single">
-                                <div class="product-title">
-                                    <small><a href="#">Macbook</a></small>
-                                    <h4><a href="#">Swivl C Series RobotSW3322-C1 </a></h4>
-                                </div>
-                                <div class="product-thumb">
-                                    <a href="#"><img src="assets/images/products/4.jpg" alt="" /></a>
-                                    <div class="product-quick-view">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                    </div>
-                                </div>
-                                <div class="product-quick-view">
-                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                </div>
-                                <div class="product-action">
-                                    <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                                    <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                                    <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
 

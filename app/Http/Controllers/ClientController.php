@@ -10,11 +10,15 @@ use Session;
 class ClientController extends Controller
 {
     public function index(){
-        $larges = Product::all();
+        $larges = Product::where('product_category','large')->get();
+        $digitals = Product::where('product_category','digital')->get();
+        $corporates = Product::where('product_category','corporate')->get();
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         return view('client.index',[
             'larges'=>$larges,
+            'digitals'=>$digitals,
+            'corporates'=>$corporates,
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice
         ]);
