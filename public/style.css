@@ -2983,7 +2983,6 @@ a.value-decrease::before {
 .page-banner-area {
 	background-image:url("assets/images/banners/small/add.jpg");
 	background-size:contain;
-	background-position:center center;
 	background-repeat:no-repeat;
 	background-color:#f8fafb;
 }
