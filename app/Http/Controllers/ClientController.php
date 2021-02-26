@@ -13,12 +13,20 @@ class ClientController extends Controller
         $larges = Product::where('product_category','large')->get();
         $digitals = Product::where('product_category','digital')->get();
         $corporates = Product::where('product_category','corporate')->get();
+        $screens = Product::where('product_category','screen')->get();
+        $promotions = Product::where('product_category','promotion')->get();
+        $lats = Product::where('product_category','digital')->get();
+        $uvs = Product::where('product_category','uv')->get();
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         return view('client.index',[
             'larges'=>$larges,
             'digitals'=>$digitals,
             'corporates'=>$corporates,
+            'screens'=>$screens,
+            'promotions'=>$promotions,
+            'uvs'=>$uvs,
+            'lats'=>$lats,
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice
         ]);
