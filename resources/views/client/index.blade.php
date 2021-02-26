@@ -762,65 +762,6 @@
             </div>
             <div class="col-xl-10 col-lg-9 fix">
                 <!--product-categories-->
-                <div class="product-categories mt-sm-40">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-title">
-                                <h3>Top Categories</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row product-categories-carousel mt-30">
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/1.png" alt="" /></a>
-                                <h4><a href="#">Sports & Outdoors</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/2.png" alt="" /></a>
-                                <h4><a href="#">Headphones</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/3.png" alt="" /></a>
-                                <h4><a href="#">Smart phone & Tablets</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/4.png" alt="" /></a>
-                                <h4><a href="#">Camera & Photography </a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/3.png" alt="" /></a>
-                                <h4><a href="#">Smart phone & Tablets</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/4.png" alt="" /></a>
-                                <h4><a href="#">Camera & Photography </a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/3.png" alt="" /></a>
-                                <h4><a href="#">Smart phone & Tablets</a></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product-cat">
-                                <a href="#"><img src="assets/images/products/category/4.png" alt="" /></a>
-                                <h4><a href="#">Camera & Photography </a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!--products-tab-->
 
                 <div class="products-tab mt-35">
