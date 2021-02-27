@@ -51,15 +51,15 @@
                             </li>
                             <li><a href="#">Services</a>
                                 <ul class="submenu">
-                                    <li><a href="blog.html">WEB DESIGN</a></li>
-                                    <li><a href="blog-grid.html">DIGITAL MARKETING</a></li>
-                                    <li><a href="blog-fullwidth.html">CORPORATE IDENTITY</a></li>
-                                    <li><a href="blog-details.html">GRAPHIC DESIGN</a></li>
-                                    <li><a href="blog-details.html">LARGE FORMAT PRINTING</a></li>
-                                    <li><a href="blog-details.html">PROMOTIONAL ITEMS</a></li>
-                                    <li><a href="blog-details.html">SIGNAGE SERVICE</a></li>
-                                    <li><a href="blog-details.html">DIGITAL PRINTING</a></li>
-                                    <li><a href="blog-details.html">OFFSET PRINTING</a></li>
+                                    <li><a href="{{url('services')}}">WEB DESIGN</a></li>
+                                    <li><a href="{{url('digitalMarketing')}}">DIGITAL MARKETING</a></li>
+                                    <li><a href="{{url('corporate')}}">CORPORATE IDENTITY</a></li>
+                                    <li><a href="{{url('graphic')}}">GRAPHIC DESIGN</a></li>
+                                    <li><a href="{{url('large')}}">LARGE FORMAT PRINTING</a></li>
+                                    <li><a href="{{url('promotional')}}">PROMOTIONAL ITEMS</a></li>
+                                    <li><a href="{{url('signage')}}">SIGNAGE SERVICE</a></li>
+                                    <li><a href="{{url('digitalPrinting')}}">DIGITAL PRINTING</a></li>
+                                    <li><a href="{{url('offset')}}">OFFSET PRINTING</a></li>
                                 </ul>
                             </li>
                             <li><a href="contact.html">Contact</a></li>

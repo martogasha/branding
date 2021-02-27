@@ -41,6 +41,78 @@ class ClientController extends Controller
             'totalPrice'=>$cart->totalPrice
         ]);
     }
+    public function services(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.services',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function digitalMarketing(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.digital',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function corporate(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.corporate',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function graphic(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.graphic',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function large(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.large',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function promotional(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.promotional',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function signage(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.signage',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function digitalPrinting(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.digitalPrinting',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function offset(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.offset',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
     public function getProductDetail(Request $request){
         if ($request->ajax()){
             $output = "";

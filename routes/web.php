@@ -19,6 +19,15 @@ Route::get('/', function () {
 Route::get('/','ClientController@index');
 Route::get('shop','ClientController@shop');
 Route::get('about','ClientController@about');
+Route::get('services','ClientController@services');
+Route::get('digitalMarketing','ClientController@digitalMarketing');
+Route::get('corporate','ClientController@corporate');
+Route::get('graphic','ClientController@graphic');
+Route::get('large','ClientController@large');
+Route::get('promotional','ClientController@promotional');
+Route::get('signage','ClientController@signage');
+Route::get('digitalPrinting','ClientController@digitalPrinting');
+Route::get('offset','ClientController@offset');
 Route::get('productDetail/{id}','ClientController@productDetail');
 Route::resource('cart','CartController');
 Route::post('cartOne','CartController@cartOne');

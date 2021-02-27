@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="company-info">
-                    <img src="assets/images/LOGO.png" alt="logo" />
+                    <img src="{{asset('assets/images/LOGO.png')}}" alt="logo" />
                     <p>Located at Kikuyu</p>
                     <p>Phone: +254 727 995 279</p>
                     <p>Phone: +254 734 421 552</p>
