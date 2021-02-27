@@ -17,6 +17,7 @@ class ClientController extends Controller
         $promotions = Product::where('product_category','promotion')->get();
         $lats = Product::where('product_category','digital')->get();
         $uvs = Product::where('product_category','uv')->get();
+        $dealOfTheWeek = Product::where('product_category','large')->first();
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         return view('client.index',[
@@ -27,6 +28,7 @@ class ClientController extends Controller
             'promotions'=>$promotions,
             'uvs'=>$uvs,
             'lats'=>$lats,
+            'dealOfTheWeek'=>$dealOfTheWeek,
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice
         ]);
@@ -146,10 +148,12 @@ class ClientController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         $detail = Product::find($id);
+        $relateds = Product::where('product_category',$detail->product_category)->get();
         return view('client.productDetail',[
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice,
-            'detail'=>$detail
+            'detail'=>$detail,
+            'relateds'=>$relateds
         ]);
     }
 }

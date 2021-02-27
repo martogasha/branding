@@ -231,14 +231,14 @@
             </div>
         </div>
         <div class="row four-items cv-visible">
+            @foreach($relateds as $related)
             <div class="col-lg-3">
                 <div class="product-single">
                     <div class="product-title">
-                        <small><a href="#">Aquaracer</a></small>
-                        <h4><a href="#">iPATROL RILEY - WiFi Enabled Mobilized Home Monitoring Robot</a></h4>
+                        <h4><a href="#">{{$related->product_name}}</a></h4>
                     </div>
                     <div class="product-thumb">
-                        <a href="#"><img src="{{asset('assets/images/products/shop/1.jpg')}}" alt="" /></a>
+                        <a href="{{url('productDetail',$related->id)}}"><img src="{{asset('uploads/product/'.$related->product_image)}}" alt="" /></a>
                         <div class="downsale"><span>-</span>$35</div>
                         <div class="product-quick-view">
                             <a href="#">quick view</a>
@@ -246,7 +246,8 @@
                     </div>
                     <div class="product-price-rating">
                         <div class="pull-left">
-                            <span>$395.00</span>
+                            <span>Ksh: {{$related->product_price}}</span>
+                            <del>Ksh:{{$related->product_cancel_price}}</del>
                         </div>
                         <div class="pull-right">
                             <i class="fa fa-star-o"></i>
@@ -263,88 +264,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="product-single">
-                    <div class="product-title">
-                        <small><a href="#">Camera</a></small>
-                        <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                    </div>
-                    <div class="product-thumb">
-                        <a href="#"><img src="assets/images/products/shop/3.jpg" alt="" /></a>
-                        <div class="product-quick-view">
-                            <a href="#">quick view</a>
-                        </div>
-                    </div>
-                    <div class="product-price-rating">
-                        <div class="pull-left">
-                            <span>$345.00</span>
-                            <del>429.99</del>
-                        </div>
-                    </div>
-                    <div class="product-action">
-                        <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                        <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                        <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="product-single">
-                    <div class="product-title">
-                        <small><a href="#">Aquaracer</a></small>
-                        <h4><a href="#">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h4>
-                    </div>
-                    <div class="product-thumb">
-                        <a href="#"><img src="assets/images/products/shop/5.jpg" alt="" /></a>
-                        <div class="downsale"><span>-</span>$35</div>
-                        <div class="product-quick-view">
-                            <a href="#">quick view</a>
-                        </div>
-                    </div>
-                    <div class="product-price-rating">
-                        <div class="pull-left">
-                            <span>$395.00</span>
-                        </div>
-                        <div class="pull-right">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                    </div>
-                    <div class="product-action">
-                        <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                        <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                        <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="product-single">
-                    <div class="product-title">
-                        <small><a href="#">Camera</a></small>
-                        <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                    </div>
-                    <div class="product-thumb">
-                        <a href="#"><img src="assets/images/products/shop/3.jpg" alt="" /></a>
-                        <div class="product-quick-view">
-                            <a href="#">quick view</a>
-                        </div>
-                    </div>
-                    <div class="product-price-rating">
-                        <div class="pull-left">
-                            <span>$345.00</span>
-                            <del>429.99</del>
-                        </div>
-                    </div>
-                    <div class="product-action">
-                        <a href="javascript:void(0);" class="product-compare"><i class="ti-control-shuffle"></i></a>
-                        <a href="javascript:void(0);" class="add-to-cart">Add to Cart</a>
-                        <a href="javascript:void(0);" class="product-wishlist"><i class="ti-heart"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

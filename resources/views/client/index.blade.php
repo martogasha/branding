@@ -228,7 +228,7 @@
             <div class="row align-items-center">
                 <div class="col-sm-4 col-6">
                     <div class="logo">
-                        <a href="{{url('/')}}"><img src="assets/images/logo.png" alt="logo" /></a>
+                        <a href="{{url('/')}}"><img src="assets/images/LOGO.png" alt="logo" /></a>
                     </div>
                 </div>
                 <div class="col-sm-8 col-6">
@@ -496,11 +496,10 @@
                             <div class="col-lg-12">
                                 <div class="product-single product-deal">
                                     <div class="product-title">
-                                        <small><a href="#">Camera</a></small>
-                                        <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
+                                        <h4><a href="#">{{$dealOfTheWeek->product_name}}</a></h4>
                                     </div>
                                     <div class="product-thumb">
-                                        <a href="#"><img src="assets/images/products/deals/1.jpg" alt="" /></a>
+                                        <a href="{{url('productDetail',$dealOfTheWeek->id)}}"><img src="{{asset('uploads/product/'.$dealOfTheWeek->product_image)}}" alt="" /></a>
                                         <div class="downsale"><span>-</span>$25</div>
                                         <div class="product-quick-view">
                                             <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
@@ -508,7 +507,7 @@
                                     </div>
                                     <div class="product-price-rating">
                                         <div class="pull-left">
-                                            <span>$195.00</span>
+                                            <span>Ksh: {{$dealOfTheWeek->product_price}}</span>
                                         </div>
                                         <div class="pull-right">
                                             <i class="fa fa-star-o"></i>
@@ -523,128 +522,11 @@
                                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
                                             </div>
                                         </div>
-                                        <span>Already Sold: <span>20</span></span>
-                                        <span>Available: <span>35</span></span>
+                                        <span>Already Sold: <span>7</span></span>
+                                        <span>Available: <span>20</span></span>
                                     </div>
                                     <div class="product-countdown">
-                                        <div data-countdown="2010/08/01"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--single-deal-->
-                            <div class="col-lg-12">
-                                <div class="product-single product-deal">
-                                    <div class="product-title">
-                                        <small><a href="#">Camera</a></small>
-                                        <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                    </div>
-                                    <div class="product-thumb">
-                                        <a href="#"><img src="assets/images/products/1.jpg" alt="" /></a>
-                                        <div class="downsale"><span>-</span>$25</div>
-                                        <div class="product-quick-view">
-                                            <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-rating">
-                                        <div class="pull-left">
-                                            <span>$195.00</span>
-                                        </div>
-                                        <div class="pull-right">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="product-availability">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                                            </div>
-                                        </div>
-                                        <span>Already Sold: <span>20</span></span>
-                                        <span>Available: <span>35</span></span>
-                                    </div>
-                                    <div class="product-countdown">
-                                        <div data-countdown="2010/08/01"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--single-deal-->
-                            <div class="col-lg-12">
-                                <div class="product-single product-deal">
-                                    <div class="product-title">
-                                        <small><a href="#">Camera</a></small>
-                                        <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                    </div>
-                                    <div class="product-thumb">
-                                        <a href="#"><img src="assets/images/products/3.jpg" alt="" /></a>
-                                        <div class="downsale"><span>-</span>$25</div>
-                                        <div class="product-quick-view">
-                                            <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-rating">
-                                        <div class="pull-left">
-                                            <span>$195.00</span>
-                                        </div>
-                                        <div class="pull-right">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="product-availability">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                                            </div>
-                                        </div>
-                                        <span>Already Sold: <span>20</span></span>
-                                        <span>Available: <span>35</span></span>
-                                    </div>
-                                    <div class="product-countdown">
-                                        <div data-countdown="2010/08/01"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--single-deal-->
-                            <div class="col-lg-12">
-                                <div class="product-single product-deal">
-                                    <div class="product-title">
-                                        <small><a href="#">Camera</a></small>
-                                        <h4><a href="#">Blue Yeti USB Microphone Blackout Edition</a></h4>
-                                    </div>
-                                    <div class="product-thumb">
-                                        <a href="#"><img src="assets/images/products/4.jpg" alt="" /></a>
-                                        <div class="downsale"><span>-</span>$25</div>
-                                        <div class="product-quick-view">
-                                            <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">quick view</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-rating">
-                                        <div class="pull-left">
-                                            <span>$195.00</span>
-                                        </div>
-                                        <div class="pull-right">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="product-availability">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-                                            </div>
-                                        </div>
-                                        <span>Already Sold: <span>20</span></span>
-                                        <span>Available: <span>35</span></span>
-                                    </div>
-                                    <div class="product-countdown">
-                                        <div data-countdown="2021/08/01"></div>
+                                        <div data-countdown="2020/08/01"></div>
                                     </div>
                                 </div>
                             </div>
