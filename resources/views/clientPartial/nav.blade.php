@@ -174,7 +174,7 @@
         <div class="row align-items-center">
             <div class="col-sm-4 col-6">
                 <div class="logo">
-                    <a href="{{url('/')}}"><img src="assets/images/LOGO.png" alt="logo" /></a>
+                    <a href="{{url('/')}}"><img src="{{asset('assets/images/LOGO.png')}}" alt="logo" /></a>
                 </div>
             </div>
             <div class="col-sm-8 col-6">

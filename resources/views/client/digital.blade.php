@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Digital Marketing</a>
                         <h2>DIGITAL MARKETING</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/digitalmarketing.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">Social media is a great platform to generate sales when you have defined goals and objectives
                         for your business or online brand
                         Our social media marketing in Kenya is highly targeted to reach your prospective customer or

@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Offset Printing</a>
                         <h2>OFFSET PRINTING</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/offse.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">
                         we will also provide printing solutions for your company annual reports, newsletters,
                         diaries, company profiles, leaflets and brochures. This coupled with seamless print

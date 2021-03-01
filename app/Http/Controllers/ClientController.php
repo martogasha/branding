@@ -133,7 +133,7 @@ class ClientController extends Controller
                             </div>
                             <div id="product-3" class="tab-pane fade">
                                 <div class="product-details-thumb">
-                                    <img src="assets/images/products/product-details/3.jpg" alt="" />
+                                    <img src="assets/images/products/product-details/invoice.jpg" alt="" />
                                 </div>
                             </div>
                         </div>

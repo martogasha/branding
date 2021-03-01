@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Signage Service</a>
                         <h2>SIGNAGE SERVICES</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/signage.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">Over the years our signage businesses have grown to become one of the most
                         respected signage businesses in Kenya. We understand the value of displaying the right
                         image and can work with you to maximise the benefit from your signage investment.</p>

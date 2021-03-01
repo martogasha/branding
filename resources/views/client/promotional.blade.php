@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Promotional Items</a>
                         <h2>PROMOTIONAL ITEMS</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/promotional.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">We offer a wide range of branded promotional items in different categories,
                         whether as corporate gifts, print promotional items, or branded corporate gifts
                         and other printing campaigns and giveaways.</p>

@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Graphic Design</a>
                         <h2>GRAPHIC DESIGN</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/graphicdesign.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">we create visual communication tools that are
                         specific to you brand.</p>
                 </div>

@@ -819,41 +819,20 @@
                 <div class="row mt-40">
                     <div class="col-xl-4 col-lg-6">
                         <div class="banner-sm hover-effect">
-                            <img src="assets/images/banners/md/1.jpg" alt="" />
-                            <div class="banner-info">
-                                <div class="product-value">
-                                    <span>$195.00</span>
-                                    <del>$229.99</del>
-                                </div>
-                                <p>Sale Up To <strong>25% <br/> Off</strong> Bosch Home</p>
-                                <a href="#" class="btn-common width-115">Buy Now</a>
-                            </div>
+                            <img src="assets/images/banners/md/can.jpg" alt="" />
+
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 mt-sm-30">
                         <div class="banner-sm hover-effect">
-                            <img src="assets/images/banners/md/2.jpg" alt="" />
-                            <div class="banner-info">
-                                <div class="product-value">
-                                    <span>$345.00</span>
-                                    <del>$429.99</del>
-                                </div>
-                                <p>Extra <strong>30% Off</strong><br/> All Sale Style</p>
-                                <a href="#" class="btn-common width-115">Buy Now</a>
-                            </div>
+                            <img src="assets/images/banners/md/photo.JPG" alt="" />
+
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 d-none d-xl-block">
                         <div class="banner-sm hover-effect">
-                            <img src="assets/images/banners/md/3.jpg" alt="" />
-                            <div class="banner-info">
-                                <div class="product-value">
-                                    <span>$345.00</span>
-                                    <del>$429.99</del>
-                                </div>
-                                <p>iPATROL <strong>Riley V2</strong><br/> Bonus Bundle</p>
-                                <a href="#" class="btn-common width-115">Buy Now</a>
-                            </div>
+                            <img src="assets/images/banners/md/invoice.jpg" alt="" />
+
                         </div>
                     </div>
                 </div>

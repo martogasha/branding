@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Corporate Identity</a>
                         <h2>CORPORATE IDENTITY</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/corporateidentity.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">Present your brand with a unique and comprehensive visual concept.
                         At Davix we offer Corporate Identity Design Services.
                         We focus on creating simple, memorable, and enduring brand images that

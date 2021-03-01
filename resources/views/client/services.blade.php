@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Web Design</a>
                         <h2>WEB  DESIGN</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/webdesign.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">To us ,developing a functional website is key in flourishing
                         the Digital-sphere.We are among the best website designers in Kenya by being affordable,
                         effective solutions and keeping delivery timelines on website design projects for our clients.</p>

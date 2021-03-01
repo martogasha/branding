@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Digital Printing</a>
                         <h2>DIGITAL PRINTING</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/digitalprinting.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">We provide fast and efficient digital printing services in Nairobi and all other
                         counties in Kenya covering mainly brochures, books, magazines, wedding invitations,
                         Christmas cards, menus, sales kits, company reports, corporate stationery, fliers

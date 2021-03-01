@@ -82,7 +82,7 @@
                         <a href="#" class="catlink">Large Format Printing</a>
                         <h2>LARGE FORMAT PRINTING</h2>
                     </div>
-                    <img src="assets/images/blog/lg/1.jpg" alt="" class="mb-20" />
+                    <img src="assets/images/blog/lg/large.jpg" alt="" class="mb-20" />
                     <p style="font-size: 20px;font-family:'Nimbus Roman'">With Davix Design large format printing capabilities, you can create durable
                         and impressive banners, as well as fine art prints or custom signage.
                         We offer a wide variety of options for indoor and outdoor applications.
