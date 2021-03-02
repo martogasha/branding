@@ -62,7 +62,7 @@
                                     <li><a href="{{url('offset')}}">OFFSET PRINTING</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{url('contact')}}">Contact</a></li>
                             <li><a href="#">Track Order</a></li>
                         </ul>
                     </nav>
@@ -77,9 +77,9 @@
             @else
             <div class="col-lg-2">
                 <div class="register-login pull-right">
-                    <a href="#" data-toggle="modal" data-target="#auth">Register</a>
+                    <a href="{{url('Register')}}" data-toggle="modal" data-target="#auth">Register</a>
                     <span>/</span>
-                    <a href="#">Sign in</a>
+                    <a href="{{url('Login')}}">Sign in</a>
                 </div>
             </div>
             @endif
@@ -110,18 +110,20 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="search-box">
-                    <select>
-                        <option>All Categories</option>
-                        <option>Large Format Printing</option>
-                        <option>Corporate Branding</option>
-                        <option>Screen Printing</option>
-                        <option>Digital & Offset Printing</option>
-                        <option>Cash/Receipt Books</option>
-                    </select>
-                    <input type="text" placeholder="What do you need?" />
-                    <button>Search</button>
-                </div>
+                <form action="{{url('search')}}" method="post">
+                    @csrf
+                    <div class="search-box mt-sm-15">
+                        <select>
+                            <option>All Categories</option>
+                            <option>Promotional Items</option>
+                            <option>Screen Printing</option>
+                            <option>Corporate Branding</option>
+                            <option>UV Printing</option>
+                        </select>
+                        <input type="text" name="search" placeholder="What do you need?" />
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
             </div>
             <div class="col-lg-4">
                 <div class="mini-cart pull-right">
@@ -220,17 +222,20 @@
         <!--search-box-->
         <div class="row align-items-center">
             <div class="col-sm-12">
+                <form action="{{url('search')}}" method="post">
+                    @csrf
                 <div class="search-box mt-sm-15">
                     <select>
                         <option>All Categories</option>
-                        <option>Computer</option>
-                        <option>TV & Smart box</option>
-                        <option>Camera & Photography</option>
-                        <option>Headphones</option>
+                        <option>Promotional Items</option>
+                        <option>Screen Printing</option>
+                        <option>Corporate Branding</option>
+                        <option>UV Printing</option>
                     </select>
-                    <input type="text" placeholder="What do you need?" />
-                    <button>Search</button>
+                    <input type="text" name="search" placeholder="What do you need?" />
+                    <button type="submit">Search</button>
                 </div>
+                </form>
             </div>
         </div>
         <!--site-menu-->
@@ -318,7 +323,7 @@
                                     <li><a href="blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{url('contact')}}">Contact</a></li>
                             <li><a href="#">Purchase Theme</a></li>
                         </ul>
                     </nav>

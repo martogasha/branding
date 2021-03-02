@@ -44,9 +44,13 @@ Route::get('Register','AuthController@register');
 Route::post('userLogin','AuthController@userLogin')->name('userLogin');
 Route::post('userRegister','AuthController@userRegister')->name('userRegister');
 Route::get('getProductDetail','ClientController@getProductDetail');
+Route::post('search','ClientController@search');
+Route::get('contact','ClientController@contact');
+Route::post('storeContact','ClientController@storeContact')->name('contact');
 
 //Admin Controller
 Route::get('admin','AdminController@admin');
+Route::get('contactUs','AdminController@contact');
 Route::get('products','AdminController@products');
 Route::get('orders','AdminController@orders');
 Route::get('reviews','AdminController@reviews');
@@ -55,6 +59,7 @@ Route::post('editProd','AdminController@editProd');
 Route::post('deleteProduct','AdminController@delete');
 Route::post('storeCategory','AdminController@storeCategory')->name('storeCategory');
 Route::post('storeProducts','AdminController@storeProduct')->name('storeProduct');
+Route::post('deleteContact','AdminController@deleteContact');
 
 
 Auth::routes();

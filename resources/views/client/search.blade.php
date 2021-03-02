@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Davix - Shop</title>
+    <title>Davix - Search Results</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -60,7 +60,7 @@
                     <div class="breadcrumbs">
                         <ul>
                             <li><a href="#">Home <i class="fa fa-angle-right"></i></a></li>
-                            <li>Shop Grid</li>
+                            <li>Search Results</li>
                         </ul>
                     </div>
                 </div>
@@ -152,7 +152,8 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>                    </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-10 col-lg-9">
@@ -203,6 +204,7 @@
                 <div class="tab-content">
                     <div id="grid-products" class="tab-pane active">
                         <div class="row">
+                            @if(!empty($shops))
                             @foreach($shops as $shop)
                             <div class="col-xl-3 col-md-4 col-sm-6">
                                 <div class="product-single">
@@ -236,6 +238,9 @@
                                 </div>
                             </div>
                             @endforeach
+                            @else
+                                <h5>No Results found</h5>
+                            @endif
 
                         </div>
                     </div>
@@ -480,6 +485,56 @@
 <!--products-area end-->
 
 <!--brands-area start-->
+<div class="container-fluid mt-60">
+    <div class="brands-area">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="brand-items">
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/1.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/2.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/3.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/4.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/5.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/6.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/7.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="brand-item">
+                        <a href="#">
+                            <img class="brand-static" src="assets/images/brands/8.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--brands-area end-->
 

@@ -25,13 +25,13 @@
                     <h4>Find It Fast</h4>
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">Laptop & Computers</a></li>
-                            <li><a href="#">Smart Phone & Tablets</a></li>
-                            <li><a href="#">TV & Audio</a></li>
-                            <li><a href="#">Cameras & Photography</a></li>
-                            <li><a href="#">Gadgets</a></li>
-                            <li><a href="#">Car Electronic & GP5</a></li>
-                            <li><a href="#">Accesories</a></li>
+                            <li><a href="{{url('promotional')}}">Promotional Items</a></li>
+                            <li><a href="{{url('services')}}">Web Design</a></li>
+                            <li><a href="{{url('corporate')}}">Corporate Identity</a></li>
+                            <li><a href="{{url('digitalMarketing')}}">Digital Marketing</a></li>
+                            <li><a href="{{url('signage')}}">Signage Services</a></li>
+                            <li><a href="{{url('offset')}}">Offset Printing</a></li>
+                            <li><a href="{{url('graphic')}}">Graphic Design</a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
                     <h4>Information</h4>
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{{url('shop')}}">All Product Category</a></li>
+                            <li><a href="{{url('about')}}">About Us</a></li>
+                            <li><a href="{{url('contact')}}">Contact Us</a></li>
                             <li><a href="#">Delivery information</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms & Conditions</a></li>

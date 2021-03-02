@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="img/fav.png" />
 
     <!-- Title -->
-    <title>Davix - Helpdesk Dashboard</title>
+    <title>Davix - Contact Us</title>
 
 
     <!-- *************
@@ -273,7 +273,7 @@
         <div class="collapse navbar-collapse" id="WafiAdminNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link active-page" href="{{url('admin')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="{{url('admin')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-devices_other nav-icon"></i>
                         Dashboard
                     </a>
@@ -297,7 +297,7 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{url('contactUs')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link active-page" href="{{url('contactUs')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-devices_other nav-icon"></i>
                         Contact Us
                     </a>
@@ -317,7 +317,7 @@
         <div class="page-header">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item active">Davix Dashboard</li>
+                <li class="breadcrumb-item active">Contact Us</li>
             </ol>
 
             <ul class="app-actions">
@@ -340,66 +340,61 @@
             </ul>
         </div>
         <!-- Page header end -->
-
+@include('flash-message')
         <!-- Content wrapper start -->
-        <div class="content-wrapper">
 
             <!-- Row starts -->
-            <div class="row gutters">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">Status</div>
-                        </div>
-                        <div class="card-body">
+            <!-- Content wrapper start -->
+            <div class="content-wrapper">
 
-                            <!-- Row starts -->
-                            <div class="row gutters">
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-                                    <a href="{{url('products')}}">
-                                    <div class="ticket-status-card">
-                                        <h6>Products</h6>
-                                        <h3>{{\App\Product::all()->count()}}</h3>
-                                    </div>
-                                    </a>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-                                    <div class="ticket-status-card">
-                                        <h6>Overdue</h6>
-                                        <h3>770</h3>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-                                    <div class="ticket-status-card">
-                                        <h6>Due Today</h6>
-                                        <h3>25</h3>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-                                    <div class="ticket-status-card">
-                                        <h6>Open</h6>
-                                        <h3>1800</h3>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-                                    <div class="ticket-status-card">
-                                        <h6>On Hold</h6>
-                                        <h3>450</h3>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-                                    <div class="ticket-status-card">
-                                        <h6>Unassigned</h6>
-                                        <h3>275</h3>
-                                    </div>
+                <!-- Row start -->
+                <div class="row gutters">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Customer Name</th>
+                                            <th>Phone</th>
+                                            <th>Email</th>
+                                            <th>Subject</th>
+                                            <th>Message</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($contacts as $contact)
+                                        <tr>
+                                            <td>{{$contact->name}}</td>
+                                            <td>{{$contact->phone}}</td>
+                                            <td>{{$contact->email}}</td>
+                                            <td>{{$contact->subject}}</td>
+                                            <td>{{$contact->message}}</td>
+                                            <form action="{{url('deleteContact')}}" method="post">
+                                                @csrf
+                                            <td>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                <input type="hidden" name="deleteContact" value="{{$contact->id}}">
+                                            </td>
+                                            </form>
+                                        </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <!-- Row ends -->
-
                         </div>
+
                     </div>
                 </div>
+                <!-- Row end -->
+
             </div>
+            <!-- Content wrapper end -->
+
             <!-- Row ends -->
 
             <!-- Row starts -->
@@ -411,7 +406,6 @@
             <!-- Row starts -->
             <!-- Row ends -->
 
-        </div>
         <!-- Content wrapper end -->
 
     </div>

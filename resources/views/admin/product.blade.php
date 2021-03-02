@@ -418,6 +418,12 @@
                         Reviews
                     </a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{url('contactUs')}}" id="dashboardsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-devices_other nav-icon"></i>
+                        Contact Us
+                    </a>
+                </li>
 
             </ul>
         </div>

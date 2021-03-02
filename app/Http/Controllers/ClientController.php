@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Cat;
+use App\Contact;
 use App\Product;
 use Illuminate\Http\Request;
 use Session;
@@ -179,11 +181,13 @@ class ClientController extends Controller
         return response($output);
     }
     public function shop(){
+        $lats = Product::where('product_category','digital')->get();
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         $shops = Product::all();
         return view('client.shop',[
             'products'=>$cart->item,
+            'lats'=>$lats,
             'totalPrice'=>$cart->totalPrice,
             'shops'=>$shops
         ]);
@@ -227,5 +231,39 @@ class ClientController extends Controller
             'detail'=>$detail,
             'relateds'=>$relateds
         ]);
+    }
+    public function search(Request $request){
+        $search = $request->input('search');
+        $shops = Product::where('product_name','like',"%$search%")->get();
+        $lats = Product::where('product_category','digital')->get();
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+
+        return view('client.search',[
+            'shops'=>$shops,
+            'lats'=>$lats,
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+
+
+        ]);
+    }
+    public function contact(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('client.contact',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice
+        ]);
+    }
+    public function storeContact(Request $request){
+        $contact = Contact::create([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+            'subject'=>$request->subject,
+            'message'=>$request->message,
+        ]);
+        return back()->with('success','FORM SUBMITTED SUCCESSFULLY');
     }
 }

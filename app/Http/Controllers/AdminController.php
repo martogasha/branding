@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\category;
+use App\Contact;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,6 +18,12 @@ class AdminController extends Controller
         else{
             return redirect(url('Login'))->with('error','Credentials doesnt match');
         }
+    }
+    public function contact(){
+        $contacts = Contact::all();
+        return view('admin.contact',[
+            'contacts'=>$contacts
+        ]);
     }
     public function edit($id){
         $product = Product::find($id);
@@ -72,6 +79,11 @@ class AdminController extends Controller
 
         return back()->with('success','Product Stored Success');
 
+    }
+    public function deleteContact(Request $request){
+        $delete = Contact::find($request->deleteContact);
+        $delete->delete();
+        return back()->with('success','Info Deleted');
     }
     public function orders(){
         return view('admin.orders');
